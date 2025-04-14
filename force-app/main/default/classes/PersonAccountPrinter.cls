@@ -5,6 +5,7 @@ public with sharing class PersonAccountPrinter {
             SELECT Id, Name, PersonContactId 
             FROM Account 
             WHERE IsPersonAccount = TRUE
+            LIMIT 100
         ];
         
         Map<Id, Account> mapIdToAccount = new Map<Id, Account>(personAccounts);
