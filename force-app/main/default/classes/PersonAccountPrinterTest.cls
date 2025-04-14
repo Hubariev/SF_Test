@@ -16,7 +16,8 @@ private class PersonAccountPrinterTest {
         insert persAcc;
     }
 
-    static testMethod void testPrintPersonAccounts() {
+    @isTest
+    static void testPrintPersonAccounts() {
         Account persAccCheck = [SELECT Id, LastName FROM Account 
                            WHERE IsPersonAccount = TRUE 
                            LIMIT 1];
